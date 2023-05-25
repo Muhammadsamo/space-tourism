@@ -67,19 +67,15 @@
   </div>
 
   <div class="mt-8">
-    <Commander key="commander" v-show="isActive('commander')"></Commander>
+    <Commander v-show="isActive('commander')"></Commander>
 
     <MissionSpecialist
-      key="missionSpecialist"
       v-show="isActive('missionSpecialist')"
     ></MissionSpecialist>
 
-    <Pilot key="pilot" v-show="isActive('pilot')"></Pilot>
+    <Pilot v-show="isActive('pilot')"></Pilot>
 
-    <FlightEngineer
-      key="flightEngineer"
-      v-show="isActive('flightEngineer')"
-    ></FlightEngineer>
+    <FlightEngineer v-show="isActive('flightEngineer')"></FlightEngineer>
   </div>
 </template>
 
