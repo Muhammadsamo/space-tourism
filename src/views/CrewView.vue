@@ -8,7 +8,7 @@
   <h1
     class="font-barlowCondesed text-[#FFFFFF] text-center tracking-[2.7px] leading-[19.2px] uppercase"
   >
-    <strong class="opacity-25 mix-blend-normal mr-4">01</strong>Meet your crew
+    <strong class="opacity-25 mix-blend-normal mr-4">02</strong>Meet your crew
   </h1>
   <div class="border-b border-[#383B4B] h-[250px] w-4/5 mx-auto mt-8">
     <div class="h-[250px] mt-auto" v-show="isActive('commander')">
@@ -67,12 +67,19 @@
   </div>
 
   <div class="mt-8">
-    <Commander v-show="isActive('commander')"></Commander>
+    <Commander key="commander" v-show="isActive('commander')"></Commander>
+
     <MissionSpecialist
+      key="missionSpecialist"
       v-show="isActive('missionSpecialist')"
     ></MissionSpecialist>
-    <Pilot v-show="isActive('pilot')"></Pilot>
-    <FlightEngineer v-show="isActive('flightEngineer')"></FlightEngineer>
+
+    <Pilot key="pilot" v-show="isActive('pilot')"></Pilot>
+
+    <FlightEngineer
+      key="flightEngineer"
+      v-show="isActive('flightEngineer')"
+    ></FlightEngineer>
   </div>
 </template>
 
@@ -95,24 +102,22 @@ const isActive = (tab) => {
 };
 
 const tabSlider = () => {
-  setTimeout(() => {
-    activeTab.value = "missionSpecialist";
+  setInterval(() => {
+    if (activeTab.value === "commander") {
+      activeTab.value = "missionSpecialist";
+    } else if (activeTab.value === "missionSpecialist") {
+      activeTab.value = "pilot";
+    } else if (activeTab.value === "pilot") {
+      activeTab.value = "flightEngineer";
+    } else if (activeTab.value === "flightEngineer") {
+      activeTab.value = "commander";
+    }
   }, 3000);
-
-  setTimeout(() => {
-    activeTab.value = "pilot";
-  }, 6000);
-
-  setTimeout(() => {
-    activeTab.value = "flightEngineer";
-  }, 9000);
-  setTimeout(() => {
-    activeTab.value = "commander";
-    tabSlider();
-  }, 12000);
 };
 
 onMounted(() => {
   tabSlider();
 });
 </script>
+
+<style></style>

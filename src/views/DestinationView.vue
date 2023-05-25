@@ -40,26 +40,26 @@
     class="uppercase text-[#FFFFFF] flex justify-between w-[300px] mx-auto mt-8"
   >
     <span
-      class="hover:border-b-[3px] pb-2 cursor-pointer"
-      :class="{ 'border-b-[3px]': isActive('moon') }"
+      class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
+      :class="{ 'border-b-[3px] text-white border-white': isActive('moon') }"
       @click="setActiveTab('moon')"
       >Moon</span
     >
     <span
-      class="hover:border-b-[3px] pb-2 cursor-pointer"
-      :class="{ 'border-b-[3px]': isActive('mars') }"
+      class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
+      :class="{ 'border-b-[3px] text-white border-white': isActive('mars') }"
       @click="setActiveTab('mars')"
       >Mars</span
     >
     <span
-      class="hover:border-b-[3px] pb-2 cursor-pointer"
-      :class="{ 'border-b-[3px]': isActive('europa') }"
+      class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
+      :class="{ 'border-b-[3px] text-white border-white': isActive('europa') }"
       @click="setActiveTab('europa')"
       >Europe</span
     >
     <span
-      class="hover:border-b-[3px] pb-2 cursor-pointer"
-      :class="{ 'border-b-[3px]': isActive('titan') }"
+      class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
+      :class="{ 'border-b-[3px] text-white border-white': isActive('titan') }"
       @click="setActiveTab('titan')"
       >Titan</span
     >
