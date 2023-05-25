@@ -2,7 +2,7 @@
   <img
     src="/home/background-home-mobile.jpg"
     alt="background-home-mobile"
-    class="absolute z-[-1] w-full xxs:min-h-screen min-h-[730px]"
+    class="absolute z-[-1] w-full xxs:min-h-screen min-h-[750px]"
   />
   <Header></Header>
 

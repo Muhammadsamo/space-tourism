@@ -2,7 +2,7 @@
   <img
     src="/technology/background-technology-mobile.jpg"
     alt="background-technology-mobile"
-    class="absolute z-[-1] w-full xxs:min-h-screen min-h-[730px]"
+    class="absolute z-[-1] w-full xxs:min-h-screen min-h-[750px]"
   />
   <Header></Header>
   <h1
