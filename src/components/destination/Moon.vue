@@ -1,5 +1,5 @@
 <template>
-  <div class="text-[#FFFFFF] w-[327px] mx-auto text-center">
+  <div class="text-[#FFFFFF] max-w-[327px] mx-auto text-center">
     <h2
       class="font-bellefair text-[56px] leading-[64.18px] uppercase text-center mt-8"
     >

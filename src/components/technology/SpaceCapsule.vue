@@ -1,5 +1,5 @@
 <template>
-  <div class="text-[#FFFFFF] w-[327px] mx-auto text-center">
+  <div class="text-[#FFFFFF] max-w-[327px] mx-auto text-center">
     <p
       class="uppercase text-center font-bellefair text-base leading-[18px] text-[#FFFFFF] opacity-50"
     >

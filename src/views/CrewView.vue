@@ -2,7 +2,7 @@
   <img
     src="/crew/background-crew-mobile.jpg"
     alt="background-crew-mobile"
-    class="absolute z-[-1] w-full min-h-screen"
+    class="absolute z-[-1] w-full xxs:min-h-screen min-h-[730px]"
   />
   <Header></Header>
   <h1
@@ -45,22 +45,22 @@
     class="uppercase text-[#FFFFFF] flex justify-between w-[100px] mx-auto mt-8"
   >
     <span
-      class="h-[10px] w-[10px] bg-[#FFFFFF] opacity-[0.17] hover:opacity-60 transition-all rounded-full cursor-pointer"
+      class="h-[10px] w-[10px] bg-[#FFFFFF] opacity-20 hover:opacity-60 transition-all rounded-full cursor-pointer"
       :class="{ 'opacity-100': isActive('commander') }"
       @click="setActiveTab('commander')"
     ></span>
     <span
-      class="h-[10px] w-[10px] bg-[#FFFFFF] opacity-[0.17] hover:opacity-60 transition-all rounded-full cursor-pointer"
+      class="h-[10px] w-[10px] bg-[#FFFFFF] opacity-20 hover:opacity-60 transition-all rounded-full cursor-pointer"
       :class="{ 'opacity-100': isActive('missionSpecialist') }"
       @click="setActiveTab('missionSpecialist')"
     ></span>
     <span
-      class="h-[10px] w-[10px] bg-[#FFFFFF] opacity-[0.17] hover:opacity-60 transition-all rounded-full cursor-pointer"
+      class="h-[10px] w-[10px] bg-[#FFFFFF] opacity-20 hover:opacity-60 transition-all rounded-full cursor-pointer"
       :class="{ 'opacity-100': isActive('pilot') }"
       @click="setActiveTab('pilot')"
     ></span>
     <span
-      class="h-[10px] w-[10px] bg-[#FFFFFF] opacity-[0.17] hover:opacity-60 transition-all rounded-full cursor-pointer"
+      class="h-[10px] w-[10px] bg-[#FFFFFF] opacity-20 hover:opacity-60 transition-all rounded-full cursor-pointer"
       :class="{ 'opacity-100': isActive('flightEngineer') }"
       @click="setActiveTab('flightEngineer')"
     ></span>

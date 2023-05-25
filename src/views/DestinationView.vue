@@ -2,7 +2,7 @@
   <img
     src="/destination/background-destination-mobile.jpg"
     alt="background-destination-mobile"
-    class="absolute z-[-1] w-full min-h-screen"
+    class="absolute z-[-1] w-full xxs:min-h-screen min-h-[730px]"
   />
   <Header></Header>
 
