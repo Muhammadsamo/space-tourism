@@ -1,129 +1,132 @@
 <template>
-  <!-- <div
-    class="blur-circle w-[513px] h-[513px] absolute bg-[#0B0D17] rounded-full blur-[150.957px] top-[37%] left-[40%] z-[-1]"
-  ></div> -->
-  <img
-    src="/destination/background-destination-mobile.jpg"
-    alt="background-destination-mobile"
-    class="absolute z-[-2] w-full h-full md:hidden"
-  />
-  <img
-    src="/destination/background-destination-tablet.jpg"
-    alt="background-destination-tablet"
-    class="absolute z-[-2] w-full h-full hidden lg:hidden md:block"
-  />
-  <img
-    src="/destination/background-destination-desktop.jpg"
-    alt="background-destination-desktop"
-    class="absolute z-[-2] w-full h-full hidden lg:block"
-  />
-  <Header></Header>
+  <div class="pt-[136px] absolute top-0 left-0 w-screen">
+    <img
+      src="/destination/background-destination-mobile.jpg"
+      alt="background-destination-mobile"
+      class="absolute top-0 left-0 z-[-2] w-full h-full md:hidden animate-spin"
+    />
+    <img
+      src="/destination/background-destination-tablet.jpg"
+      alt="background-destination-tablet"
+      class="absolute top-0 left-0 z-[-2] w-full h-full hidden lg:hidden md:block animate-spin"
+    />
+    <img
+      src="/destination/background-destination-desktop.jpg"
+      alt="background-destination-desktop"
+      class="absolute top-0 left-0 z-[-2] w-full h-full hidden lg:block animate-spin"
+    />
 
-  <PageHeading page-num="01" page-heading="Pick your destination"></PageHeading>
+    <!-- <Header></Header> -->
 
-  <div
-    class="flex flex-col lg:flex-row lg:h-[calc(100vh-136px)] lg:justify-around lg:items-center"
-  >
-    <div>
-      <div
-        class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
-        v-show="isActive('moon')"
-      >
-        <img src="/destination/image-moon.png" alt="moon" />
-      </div>
-      <div
-        class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
-        v-show="isActive('mars')"
-      >
-        <img src="/destination/image-mars.png" alt="mars" />
-      </div>
-      <div
-        class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
-        v-show="isActive('europa')"
-      >
-        <img src="/destination/image-europa.png" alt="europa" />
-      </div>
-      <div
-        class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
-        v-show="isActive('titan')"
-      >
-        <img src="/destination/image-titan.png" alt="titan" />
-      </div>
-    </div>
+    <PageHeading
+      page-num="01"
+      page-heading="Pick your destination"
+    ></PageHeading>
 
-    <div>
-      <div
-        class="uppercase text-[#FFFFFF] flex justify-between w-[300px] mx-auto lg:mx-0 lg:text-left mt-8"
-      >
-        <span
-          class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
-          :class="{
-            'border-b-[3px] text-white border-white': isActive('moon'),
-          }"
-          @click="setActiveTab('moon')"
-          >Moon</span
+    <div
+      class="flex flex-col lg:flex-row lg:h-[calc(100vh-136px)] lg:justify-around lg:items-center"
+    >
+      <div>
+        <div
+          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
+          v-show="isActive('moon')"
         >
-        <span
-          class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
-          :class="{
-            'border-b-[3px] text-white border-white': isActive('mars'),
-          }"
-          @click="setActiveTab('mars')"
-          >Mars</span
+          <img src="/destination/image-moon.png" alt="moon" />
+        </div>
+        <div
+          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
+          v-show="isActive('mars')"
         >
-        <span
-          class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
-          :class="{
-            'border-b-[3px] text-white border-white': isActive('europa'),
-          }"
-          @click="setActiveTab('europa')"
-          >Europe</span
+          <img src="/destination/image-mars.png" alt="mars" />
+        </div>
+        <div
+          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
+          v-show="isActive('europa')"
         >
-        <span
-          class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
-          :class="{
-            'border-b-[3px] text-white border-white': isActive('titan'),
-          }"
-          @click="setActiveTab('titan')"
-          >Titan</span
+          <img src="/destination/image-europa.png" alt="europa" />
+        </div>
+        <div
+          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
+          v-show="isActive('titan')"
         >
+          <img src="/destination/image-titan.png" alt="titan" />
+        </div>
       </div>
 
-      <div v-show="isActive('moon')">
-        <DestinationItem
-          :title="destinations.moon.title"
-          :desc="destinations.moon.desc"
-          :distance="destinations.moon.distance"
-          :time="destinations.moon.time"
+      <div>
+        <div
+          class="uppercase text-[#FFFFFF] flex justify-between w-[300px] mx-auto lg:mx-0 lg:text-left mt-8"
         >
-        </DestinationItem>
-      </div>
-      <div v-show="isActive('mars')">
-        <DestinationItem
-          :title="destinations.mars.title"
-          :desc="destinations.mars.desc"
-          :distance="destinations.mars.distance"
-          :time="destinations.mars.time"
-        >
-        </DestinationItem>
-      </div>
-      <div v-show="isActive('europa')">
-        <DestinationItem
-          :title="destinations.europa.title"
-          :desc="destinations.europa.desc"
-          :distance="destinations.europa.distance"
-          :time="destinations.europa.time"
-        >
-        </DestinationItem>
-      </div>
-      <div v-show="isActive('titan')">
-        <DestinationItem
-          :title="destinations.titan.title"
-          :desc="destinations.titan.desc"
-          :distance="destinations.titan.distance"
-          :time="destinations.titan.time"
-        >
-        </DestinationItem>
+          <span
+            class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
+            :class="{
+              'border-b-[3px] text-white border-white': isActive('moon'),
+            }"
+            @click="setActiveTab('moon')"
+            >Moon</span
+          >
+          <span
+            class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
+            :class="{
+              'border-b-[3px] text-white border-white': isActive('mars'),
+            }"
+            @click="setActiveTab('mars')"
+            >Mars</span
+          >
+          <span
+            class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
+            :class="{
+              'border-b-[3px] text-white border-white': isActive('europa'),
+            }"
+            @click="setActiveTab('europa')"
+            >Europe</span
+          >
+          <span
+            class="hover:border-b-[3px] text-[#D0D6F9] border-[#D0D6F9] pb-2 cursor-pointer"
+            :class="{
+              'border-b-[3px] text-white border-white': isActive('titan'),
+            }"
+            @click="setActiveTab('titan')"
+            >Titan</span
+          >
+        </div>
+
+        <div v-show="isActive('moon')">
+          <DestinationItem
+            :title="destinations.moon.title"
+            :desc="destinations.moon.desc"
+            :distance="destinations.moon.distance"
+            :time="destinations.moon.time"
+          >
+          </DestinationItem>
+        </div>
+        <div v-show="isActive('mars')">
+          <DestinationItem
+            :title="destinations.mars.title"
+            :desc="destinations.mars.desc"
+            :distance="destinations.mars.distance"
+            :time="destinations.mars.time"
+          >
+          </DestinationItem>
+        </div>
+        <div v-show="isActive('europa')">
+          <DestinationItem
+            :title="destinations.europa.title"
+            :desc="destinations.europa.desc"
+            :distance="destinations.europa.distance"
+            :time="destinations.europa.time"
+          >
+          </DestinationItem>
+        </div>
+        <div v-show="isActive('titan')">
+          <DestinationItem
+            :title="destinations.titan.title"
+            :desc="destinations.titan.desc"
+            :distance="destinations.titan.distance"
+            :time="destinations.titan.time"
+          >
+          </DestinationItem>
+        </div>
       </div>
     </div>
   </div>

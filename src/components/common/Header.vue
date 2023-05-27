@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-150px md:min-h-[96px] bg-[transparent] min-w-full lg:pt-[40px]"
+    class="min-h-150px md:min-h-[96px] bg-[transparent] min-w-full lg:pt-[40px] absolute top-0"
   >
     <Transition name="slide">
       <MobileNav v-show="navShow"></MobileNav>
