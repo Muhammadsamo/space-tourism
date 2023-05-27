@@ -1,13 +1,21 @@
 <template>
-  <div class="min-h-150px bg-[transparent] min-w-full">
+  <div
+    class="min-h-150px md:min-h-[96px] bg-[transparent] min-w-full lg:pt-[40px]"
+  >
     <Transition name="slide">
-      <Navbar v-show="navShow"></Navbar>
+      <MobileNav v-show="navShow"></MobileNav>
     </Transition>
-    <div class="flex items-center justify-between px-6 py-8">
+    <div
+      class="flex items-center justify-between px-6 py-8 md:pl-6 md:pr-0 md:py-0"
+    >
       <div>
         <a href="/"><img src="/shared/logo.svg" alt="logo" /></a>
       </div>
-      <div @click="toggleNav" class="z-[1000] text-[#D0D6F9] cursor-pointer">
+      <MainNav class="hidden md:flex"></MainNav>
+      <div
+        @click="toggleNav"
+        class="z-[1000] text-[#D0D6F9] cursor-pointer md:hidden"
+      >
         <img
           v-if="!navShow"
           src="/shared/icon-hamburger.svg"
@@ -25,7 +33,8 @@
 </template>
 
 <script setup>
-import Navbar from "./Navbar.vue";
+import MobileNav from "./MobileNav.vue";
+import MainNav from "./MainNav.vue";
 import { ref } from "vue";
 
 const navShow = ref(false);

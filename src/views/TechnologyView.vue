@@ -2,32 +2,41 @@
   <img
     src="/technology/background-technology-mobile.jpg"
     alt="background-technology-mobile"
-    class="absolute z-[-1] w-full xxs:min-h-screen min-h-[750px]"
+    class="absolute z-[-1] w-full min-h-full md:hidden"
+  />
+  <img
+    src="/technology/background-technology-tablet.jpg"
+    alt="background-technology-tablet"
+    class="absolute z-[-1] w-full min-h-full hidden md:block lg:hidden"
+  />
+  <img
+    src="/technology/background-technology-desktop.jpg"
+    alt="background-technology-desktop"
+    class="absolute z-[-1] w-full min-h-full hidden lg:block"
   />
   <Header></Header>
-  <h1
-    class="font-barlowCondesed text-[#FFFFFF] text-base text-center tracking-[2.7px] leading-[19.2px] uppercase"
-  >
-    <strong class="opacity-25 mix-blend-normal mr-4">03</strong>SPACE LAUNCH 101
-  </h1>
+  <PageHeading page-num="03" page-heading="SPACE LAUNCH 101"></PageHeading>
   <div class="mt-8">
-    <div class="h-[170px] w-screen" v-show="isActive('vehicle')">
+    <div class="h-[170px] md:h-[310px] w-full" v-show="isActive('vehicle')">
       <img
-        class="h-full w-screen"
+        class="h-full w-full"
         src="/technology/image-launch-vehicle-landscape.jpg"
         alt="launch-vehicle"
       />
     </div>
-    <div class="h-[170px] w-screen" v-show="isActive('spaceport')">
+    <div class="h-[170px] md:h-[310px] w-full" v-show="isActive('spaceport')">
       <img
-        class="h-full w-screen"
+        class="h-full w-full"
         src="/technology/image-spaceport-landscape.jpg"
         alt="launch-vehicle"
       />
     </div>
-    <div class="h-[170px] w-screen" v-show="isActive('spaceCapsule')">
+    <div
+      class="h-[170px] md:h-[310px] w-full"
+      v-show="isActive('spaceCapsule')"
+    >
       <img
-        class="h-full w-screen"
+        class="h-full w-full"
         src="/technology/image-space-capsule-landscape.jpg"
         alt="launch-vehicle"
       />
@@ -35,43 +44,54 @@
   </div>
 
   <div
-    class="uppercase text-[#FFFFFF] font-bellefair text-base flex justify-between w-[150px] mx-auto mt-8"
+    class="uppercase text-[#FFFFFF] font-bellefair text-base flex justify-between w-[150px] md:w-[220px] mx-auto mt-8"
   >
     <span
-      class="flex items-center justify-center h-[40px] w-[40px] bg-transparent border border-[#FFFFFF] opacity-25 hover:opacity-100 transition-all rounded-full cursor-pointer"
-      :class="{ 'bg-white text-[#000] opacity-100': isActive('vehicle') }"
+      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] transition-all rounded-full cursor-pointer"
+      :class="{ 'bg-[#FFFFFFFF] text-[#000]': isActive('vehicle') }"
       @click="setActiveTab('vehicle')"
       >1</span
     >
     <span
-      class="flex items-center justify-center h-[40px] w-[40px] bg-transparent border border-[#FFFFFF] opacity-25 hover:opacity-100 transition-all rounded-full cursor-pointer"
+      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] transition-all rounded-full cursor-pointer"
       :class="{
-        'bg-white text-[#000] opacity-100': isActive('spaceport'),
+        'bg-[#FFFFFFFF] text-[#000] opacity-100': isActive('spaceport'),
       }"
       @click="setActiveTab('spaceport')"
       >2</span
     >
     <span
-      class="flex items-center justify-center h-[40px] w-[40px] bg-transparent border border-[#FFFFFF] opacity-25 hover:opacity-100 transition-all rounded-full cursor-pointer"
+      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] transition-all rounded-full cursor-pointer"
       :class="{
-        'bg-white text-[#000] opacity-100': isActive('spaceCapsule'),
+        'bg-[#FFFFFFFF] text-[#000] opacity-100': isActive('spaceCapsule'),
       }"
       @click="setActiveTab('spaceCapsule')"
       >3</span
     >
   </div>
-  <div class="mt-8">
-    <LaunchVehicle v-show="isActive('vehicle')"></LaunchVehicle>
-    <SpacePort v-show="isActive('spaceport')"></SpacePort>
-    <SpaceCapsule v-show="isActive('spaceCapsule')"></SpaceCapsule>
+  <div class="mt-8 md:w-[460px] mx-auto">
+    <TechnologyItem
+      :title="techItems.launchVehicle.title"
+      :desc="techItems.launchVehicle.desc"
+      v-show="isActive('vehicle')"
+    ></TechnologyItem>
+    <TechnologyItem
+      :title="techItems.spaceport.title"
+      :desc="techItems.spaceport.desc"
+      v-show="isActive('spaceport')"
+    ></TechnologyItem>
+    <TechnologyItem
+      :title="techItems.spaceCapsule.title"
+      :desc="techItems.spaceCapsule.desc"
+      v-show="isActive('spaceCapsule')"
+    ></TechnologyItem>
   </div>
 </template>
 
 <script setup>
 import Header from "../components/common/Header.vue";
-import LaunchVehicle from "../components/technology/LaunchVehicle.vue";
-import SpaceCapsule from "../components/technology/SpaceCapsule.vue";
-import SpacePort from "../components/technology/Spaceport.vue";
+import PageHeading from "../components/common/PageHeading.vue";
+import TechnologyItem from "../components/technology/TechnologyItem.vue";
 
 import { onMounted, ref } from "vue";
 
@@ -82,6 +102,21 @@ const setActiveTab = (tab) => {
 };
 const isActive = (tab) => {
   return activeTab.value === tab;
+};
+
+const techItems = {
+  launchVehicle: {
+    title: "Launch Vehicle",
+    desc: "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
+  },
+  spaceport: {
+    title: "spaceport",
+    desc: " A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
+  },
+  spaceCapsule: {
+    title: "Space Capsule",
+    desc: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained.",
+  },
 };
 
 const tabSlider = () => {

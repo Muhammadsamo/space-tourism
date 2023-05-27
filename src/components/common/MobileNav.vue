@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="h-screen w-[254px] bg-[#FFFFFF0A] text-[#FFFFFF] flex flex-col fixed top-0 right-0 z-[999] backdrop-blur-[40.7742px] px-10 pt-36 gap-8 uppercase font-barlowCondesed"
+    class="h-screen w-[254px] bg-[#FFFFFF0A] text-[#FFFFFF] flex flex-col fixed top-0 right-0 z-[999] backdrop-blur-[40.7742px] px-10 pt-36 gap-8 uppercase font-barlowCondensed"
   >
     <RouterLink
       class="leading-[19.2px] tracking-[2.7px] text-base font-normal"
