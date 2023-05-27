@@ -19,7 +19,7 @@
   <PageHeading page-num="02" page-heading="Meet your crew"></PageHeading>
 
   <div
-    class="uppercase text-[#FFFFFF] flex justify-between w-[100px] absolute left-2/4 -translate-x-2/4 top-[445px] md:top-[420px] lg:top-[620px] xl:top-[700px] 2xl:top-[800px] lg:left-[150px]"
+    class="uppercase text-[#FFFFFF] flex justify-between w-[100px] absolute left-2/4 -translate-x-2/4 top-[445px] md:top-[420px] lg:top-[620px] xl:top-[670px] lg:left-[150px]"
   >
     <span
       class="h-[10px] w-[10px] bg-[#FFFFFF33] hover:bg-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
@@ -44,7 +44,7 @@
   </div>
 
   <div
-    class="flex flex-col md:flex-col-reverse lg:flex-row-reverse justify-center md:items-center lg:justify-end lg:items-center gap-[40px] lg:h-[calc(100vh-136px)]"
+    class="flex flex-col md:flex-col-reverse lg:flex-row-reverse justify-center md:items-center lg:justify-end lg:items-center gap-[40px] lg:h-[calc(100vh-136px)] xl:h-[calc(100vh-290px)]"
   >
     <div
       class="border-b border-[#383B4B] md:border-none md:absolute lg:static md:bottom-0 md:left-2/4 md:-translate-x-2/4 lg:translate-x-0 h-[250px] md:h-[572px] w-4/5 lg:w-2/4 mx-auto lg:mx-0 mt-8"
