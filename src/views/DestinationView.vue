@@ -132,7 +132,7 @@
 <script setup>
 import Header from "../components/common/Header.vue";
 import PageHeading from "../components/common/PageHeading.vue";
-import DestinationItem from "../components/destination/destinationItem.vue";
+import DestinationItem from "../components/destination/DestinationItem.vue";
 import { ref } from "vue";
 
 const activeTab = ref("moon");

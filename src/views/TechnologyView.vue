@@ -47,13 +47,13 @@
     class="uppercase text-[#FFFFFF] font-bellefair text-base flex justify-between w-[150px] md:w-[220px] mx-auto mt-8"
   >
     <span
-      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] transition-all rounded-full cursor-pointer"
+      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
       :class="{ 'bg-[#FFFFFFFF] text-[#000]': isActive('vehicle') }"
       @click="setActiveTab('vehicle')"
       >1</span
     >
     <span
-      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] transition-all rounded-full cursor-pointer"
+      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
       :class="{
         'bg-[#FFFFFFFF] text-[#000] opacity-100': isActive('spaceport'),
       }"
@@ -61,7 +61,7 @@
       >2</span
     >
     <span
-      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] transition-all rounded-full cursor-pointer"
+      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
       :class="{
         'bg-[#FFFFFFFF] text-[#000] opacity-100': isActive('spaceCapsule'),
       }"
