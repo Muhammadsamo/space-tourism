@@ -10,7 +10,7 @@
   <img
     src="/destination/background-destination-tablet.jpg"
     alt="background-destination-tablet"
-    class="absolute z-[-2] w-full min-h-screen hidden lg:hidden md:block"
+    class="absolute z-[-2] w-full h-full hidden lg:hidden md:block"
   />
   <img
     src="/destination/background-destination-desktop.jpg"
