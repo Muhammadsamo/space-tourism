@@ -3,17 +3,17 @@
     <img
       src="/destination/background-destination-mobile.jpg"
       alt="background-destination-mobile"
-      class="absolute top-0 left-0 z-[-2] w-full h-full md:hidden animate-spin"
+      class="absolute top-0 left-0 z-[-2] w-full h-full md:hidden"
     />
     <img
       src="/destination/background-destination-tablet.jpg"
       alt="background-destination-tablet"
-      class="absolute top-0 left-0 z-[-2] w-full h-full hidden lg:hidden md:block animate-spin"
+      class="absolute top-0 left-0 z-[-2] w-full h-full hidden lg:hidden md:block"
     />
     <img
       src="/destination/background-destination-desktop.jpg"
       alt="background-destination-desktop"
-      class="absolute top-0 left-0 z-[-2] w-full h-full hidden lg:block animate-spin"
+      class="absolute top-0 left-0 z-[-2] w-full h-full hidden lg:block"
     />
 
     <!-- <Header></Header> -->
@@ -28,25 +28,25 @@
     >
       <div>
         <div
-          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
+          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10 animate-[spin_20s_ease_infinite]"
           v-show="isActive('moon')"
         >
           <img src="/destination/image-moon.png" alt="moon" />
         </div>
         <div
-          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
+          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10 animate-[spin_20s_ease_infinite]"
           v-show="isActive('mars')"
         >
           <img src="/destination/image-mars.png" alt="mars" />
         </div>
         <div
-          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
+          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10 animate-[spin_20s_ease_infinite]"
           v-show="isActive('europa')"
         >
           <img src="/destination/image-europa.png" alt="europa" />
         </div>
         <div
-          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10"
+          class="destination-img mx-auto w-[170px] h-[170px] md:w-[300px] md:h-[300px] lg:w-[450px] lg:h-[450px] mt-10 animate-[spin_20s_ease_infinite]"
           v-show="isActive('titan')"
         >
           <img src="/destination/image-titan.png" alt="titan" />
