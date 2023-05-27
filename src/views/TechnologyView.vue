@@ -16,75 +16,98 @@
   />
   <Header></Header>
   <PageHeading page-num="03" page-heading="SPACE LAUNCH 101"></PageHeading>
-  <div class="mt-8">
-    <div class="h-[170px] md:h-[310px] w-full" v-show="isActive('vehicle')">
-      <img
-        class="h-full w-full"
-        src="/technology/image-launch-vehicle-landscape.jpg"
-        alt="launch-vehicle"
-      />
-    </div>
-    <div class="h-[170px] md:h-[310px] w-full" v-show="isActive('spaceport')">
-      <img
-        class="h-full w-full"
-        src="/technology/image-spaceport-landscape.jpg"
-        alt="launch-vehicle"
-      />
-    </div>
-    <div
-      class="h-[170px] md:h-[310px] w-full"
-      v-show="isActive('spaceCapsule')"
-    >
-      <img
-        class="h-full w-full"
-        src="/technology/image-space-capsule-landscape.jpg"
-        alt="launch-vehicle"
-      />
-    </div>
-  </div>
 
   <div
-    class="uppercase text-[#FFFFFF] font-bellefair text-base flex justify-between w-[150px] md:w-[220px] mx-auto mt-8"
+    class="grid grid-cols-1 grid-rows-[1fr_100px_1fr] md:grid-rows-[1fr_160px_1fr] lg:grid-cols-[400px_1fr_1fr] lg:grid-rows-1 lg:justify-items-end items-center lg:h-[calc(100vh-136px)]"
   >
-    <span
-      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
-      :class="{ 'bg-[#FFFFFFFF] text-[#000]': isActive('vehicle') }"
-      @click="setActiveTab('vehicle')"
-      >1</span
+    <div class="mt-8 lg:w-[515px] lg:h-[527px] lg:col-start-3 lg:col-end-3">
+      <div class="h-[170px] md:h-[310px] w-full" v-show="isActive('vehicle')">
+        <img
+          class="h-full w-full lg:hidden"
+          src="/technology/image-launch-vehicle-landscape.jpg"
+          alt="launch-vehicle"
+        />
+        <img
+          class="h-full w-[515px] hidden lg:my-auto lg:h-[527px] lg:block"
+          src="/technology/image-launch-vehicle-portrait.jpg"
+          alt="launch-vehicle"
+        />
+      </div>
+      <div class="h-[170px] md:h-[310px] w-full" v-show="isActive('spaceport')">
+        <img
+          class="h-full w-full lg:hidden"
+          src="/technology/image-spaceport-landscape.jpg"
+          alt="launch-vehicle"
+        />
+        <img
+          class="h-full w-[515px] hidden lg:h-[527px] lg:block"
+          src="/technology/image-spaceport-portrait.jpg"
+          alt="launch-vehicle"
+        />
+      </div>
+      <div
+        class="h-[170px] md:h-[310px] w-full"
+        v-show="isActive('spaceCapsule')"
+      >
+        <img
+          class="h-full w-full lg:hidden"
+          src="/technology/image-space-capsule-landscape.jpg"
+          alt="launch-vehicle"
+        />
+        <img
+          class="h-full w-[515px] hidden lg:h-[527px] lg:block"
+          src="/technology/image-space-capsule-portrait.jpg"
+          alt="launch-vehicle"
+        />
+      </div>
+    </div>
+
+    <div
+      class="uppercase text-[#FFFFFF] font-bellefair text-base flex justify-between lg:flex-col lg:h-[300px] lg:w-[100px] w-[150px] md:w-[220px] mx-auto lg: lg:col-span-1 lg:col-start-1 lg:col-end-1 lg:row-start-1"
     >
-    <span
-      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
-      :class="{
-        'bg-[#FFFFFFFF] text-[#000] opacity-100': isActive('spaceport'),
-      }"
-      @click="setActiveTab('spaceport')"
-      >2</span
+      <span
+        class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] lg:w-[80px] lg:h-[80px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
+        :class="{ 'bg-[#FFFFFFFF] text-[#000]': isActive('vehicle') }"
+        @click="setActiveTab('vehicle')"
+        >1</span
+      >
+      <span
+        class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] lg:w-[80px] lg:h-[80px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
+        :class="{
+          'bg-[#FFFFFFFF] text-[#000] opacity-100': isActive('spaceport'),
+        }"
+        @click="setActiveTab('spaceport')"
+        >2</span
+      >
+      <span
+        class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] lg:w-[80px] lg:h-[80px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
+        :class="{
+          'bg-[#FFFFFFFF] text-[#000] opacity-100': isActive('spaceCapsule'),
+        }"
+        @click="setActiveTab('spaceCapsule')"
+        >3</span
+      >
+    </div>
+
+    <div
+      class="mt-8 md:w-[460px] mx-auto lg:mx-0 lg:justify-self-start lg:w-auto lg:col-start-2 lg:col-end-2 lg:row-start-1"
     >
-    <span
-      class="flex md:text-2xl md:leading-7 items-center justify-center h-[40px] w-[40px] md:h-[60px] md:w-[60px] border border-[#FFFFFF40] hover:border-[#FFFFFFFF] transition-all rounded-full cursor-pointer"
-      :class="{
-        'bg-[#FFFFFFFF] text-[#000] opacity-100': isActive('spaceCapsule'),
-      }"
-      @click="setActiveTab('spaceCapsule')"
-      >3</span
-    >
-  </div>
-  <div class="mt-8 md:w-[460px] mx-auto">
-    <TechnologyItem
-      :title="techItems.launchVehicle.title"
-      :desc="techItems.launchVehicle.desc"
-      v-show="isActive('vehicle')"
-    ></TechnologyItem>
-    <TechnologyItem
-      :title="techItems.spaceport.title"
-      :desc="techItems.spaceport.desc"
-      v-show="isActive('spaceport')"
-    ></TechnologyItem>
-    <TechnologyItem
-      :title="techItems.spaceCapsule.title"
-      :desc="techItems.spaceCapsule.desc"
-      v-show="isActive('spaceCapsule')"
-    ></TechnologyItem>
+      <TechnologyItem
+        :title="techItems.launchVehicle.title"
+        :desc="techItems.launchVehicle.desc"
+        v-show="isActive('vehicle')"
+      ></TechnologyItem>
+      <TechnologyItem
+        :title="techItems.spaceport.title"
+        :desc="techItems.spaceport.desc"
+        v-show="isActive('spaceport')"
+      ></TechnologyItem>
+      <TechnologyItem
+        :title="techItems.spaceCapsule.title"
+        :desc="techItems.spaceCapsule.desc"
+        v-show="isActive('spaceCapsule')"
+      ></TechnologyItem>
+    </div>
   </div>
 </template>
 
